@@ -28,7 +28,7 @@ Training uses **Proximal Policy Optimization (PPO)**, an on-policy actor–criti
 updated with the clipped surrogate objective, which keeps each update close to the previous policy:
 
 $$L^{\text{CLIP}}(\theta) = \hat{\mathbb{E}}_t\!\left[\min\!\big(\rho_t(\theta)\,\hat{A}_t,\;
-\operatorname{clip}(\rho_t(\theta), 1-\epsilon, 1+\epsilon)\,\hat{A}_t\big)\right],
+\mathrm{clip}(\rho_t(\theta), 1-\epsilon, 1+\epsilon)\,\hat{A}_t\big)\right],
 \qquad
 \rho_t(\theta) = \frac{\pi_\theta(a_t\mid s_t)}{\pi_{\theta_{\text{old}}}(a_t\mid s_t)}.$$
 
