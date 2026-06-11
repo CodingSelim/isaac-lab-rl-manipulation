@@ -41,8 +41,7 @@ $$\hat{A}_t = \sum_{l=0}^{\infty} (\gamma\lambda)^{l}\,\delta_{t+l},
 The critic $V_\phi$ is fit by regression to the returns and an entropy term keeps the policy
 exploratory, giving the combined loss
 
-$$L(\theta,\phi) = -L^{\text{CLIP}}(\theta) + c_v\,\mathbb{E}_t\big[(V_\phi(s_t) - \hat{R}_t)^2\big]
-- c_e\,\mathbb{E}_t\big[\mathcal{H}[\pi_\theta(\cdot\mid s_t)]\big].$$
+$$L(\theta,\phi) = -L^{\text{CLIP}}(\theta) + c_v\,\mathbb{E}_t\big[(V_\phi(s_t) - \hat{R}_t)^2\big] - c_e\,\mathbb{E}_t\big[\mathcal{H}[\pi_\theta(\cdot\mid s_t)]\big].$$
 
 Observations are normalised with a running mean/std, advantages are normalised per batch, and the
 learning rate is adapted from the measured KL divergence between successive policies.
